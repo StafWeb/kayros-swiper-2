@@ -193,7 +193,12 @@
       </nav>
     </div>
   </footer>
-  <script src="./js/swiper-bundle.min.js"></script>
+  <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+  <script type="text/javascript">
+    {
+      if (screen.width > 550) document.write ('<script type="text/javascript" src="./js/swiper-bundle.min.js" ></sc' + 'ript>');
+    }
+    </script>
   <script src="./js/main.js"></script>
 </body>
 

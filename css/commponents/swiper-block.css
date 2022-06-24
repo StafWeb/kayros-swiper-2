@@ -49,6 +49,7 @@
 
 .swiper-wrapper {
   display: flex;
+  gap: 60px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -188,5 +189,23 @@
 
   .swiper-slide:first-child {
     display: none;
+  }
+}
+@media (max-width: 550px) {
+  .swiper-block {
+    min-height: 100%;
+  }
+
+  .swiper-wrapper {
+    overflow: scroll;
+  }
+
+  .swiper-slide {
+    max-width: 200px;
+    max-height: 332px;
+  }
+  .swiper-slide img {
+    width: 200px;
+    height: 300px;
   }
 }
