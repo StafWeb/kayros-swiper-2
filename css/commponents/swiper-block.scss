@@ -1,0 +1,231 @@
+.swiper-block {
+  min-height: 100vh;
+
+  &__container {
+    display: grid;
+    padding: 0px;
+    padding-left: 40px;
+    max-width: 1440px;
+  }
+  &__info {
+    display: none;
+    &-wrapper {
+      width: 100%;
+      height: 542px;
+    }
+  }
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 74px;
+  }
+  &__descr {
+    width: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #777777;
+  }
+}
+.swiper {
+  cursor: pointer;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  min-height: 100vh;
+}
+.swiper-wrapper {
+  display: flex;
+  gap: 60px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: transform;
+  box-sizing: content-box;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+.swiper-slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 335px !important;
+  height: 545px !important;
+  visibility: hidden;
+  flex-shrink: 0;
+  position: relative;
+  margin: auto 0;
+  transition-property: transform;
+  // animation-delay: 0.3s;
+  will-change: scroll-position;
+
+  &:nth-child(1) {
+    animation-delay: 2s;
+  }
+  &:nth-child(2) {
+    animation-delay: 2.3s;
+  }
+  &:nth-child(3) {
+    animation-delay: 2.6s;
+  }
+  &:nth-child(4) {
+    animation-delay: 2.9s;
+  }
+  &__info {
+    &-wrapper {
+      width: 100%;
+      height: 542px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 74px;
+  }
+  &__descr {
+    width: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #777777;
+  }
+
+  &__img {
+    // width: 330px;
+    // max-height: 495px;
+    img {
+      width: 330px;
+      height: 495px;
+    }
+  }
+  &__pagination {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(176, 151, 110, 0.3);
+    .swiper-pagination-progressbar {
+      height: 100%;
+      background-color: rgba(176, 151, 110, 0.3);
+      .swiper-pagination-progressbar-fill {
+        background: rgba(176, 151, 110, 0.7);
+      }
+    }
+  }
+}
+.slideinup {
+  animation-name: slideinup;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  visibility: visible;
+}
+
+@keyframes slideinup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.none {
+  display: none;
+}
+// .pullup{
+// 	animation-name: pullup;
+// 	-webkit-animation-name: pullup;
+
+// 	animation-duration: 0.6s;
+// 	-webkit-animation-duration: 0.6s;
+
+// 	animation-timing-function: ease;
+// 	-webkit-animation-timing-function: ease;
+
+// 	transform-origin: 0 100%;
+// 	-ms-transform-origin: 0 100%;
+// 	-webkit-transform-origin: 0 100%;
+//   visibility: visible;
+// }
+
+// @keyframes pullup {
+// 	0% {
+// 		transform: scaleY(0.1);
+// 	}
+// 	// 40% {
+// 	// 	transform: scaleY(1.02);
+// 	// }
+// 	// 60% {
+// 	// 	transform: scaleY(0.98);
+// 	// }
+// 	// 80% {
+// 	// 	transform: scaleY(1.01);
+// 	// }
+// 	// 100% {
+// 	// 	transform: scaleY(0.98);
+// 	// }
+// 	// 80% {
+// 	// 	transform: scaleY(1.01);
+// 	// }
+// 	100% {
+// 		transform: scaleY(1);
+// 	}
+// }
+
+// @-webkit-keyframes pullup {
+// 	0% {
+// 		-webkit-transform: scaleY(0.1);
+// 	}
+// 	// 40% {
+// 	// 	-webkit-transform: scaleY(1.02);
+// 	// }
+// 	// 60% {
+// 	// 	-webkit-transform: scaleY(0.98);
+// 	// }
+// 	// 80% {
+// 	// 	-webkit-transform: scaleY(1.01);
+// 	// }
+// 	// 100% {
+// 	// 	-webkit-transform: scaleY(0.98);
+// 	// }
+// 	// 80% {
+// 	// 	-webkit-transform: scaleY(1.01);
+// 	// }
+// 	100% {
+// 		-webkit-transform: scaleY(1);
+// 	}
+// }
+// @media(max-width:)
+@media (max-width: 950px) {
+  .swiper-block__info{
+    display: block;
+  }
+  .swiper-slide:first-child {
+    display: none;
+  }
+}
