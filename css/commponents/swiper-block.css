@@ -55,8 +55,9 @@
   z-index: 1;
   transition-property: transform;
   box-sizing: content-box;
+  scrollbar-width: none;
 }
-.swiper-wrapper::-webkit-scrollbar {
+.swiper-wrapper::-webkit-scrollbar, .swiper-wrapper::-webkit-scrollbar-button, .swiper-wrapper::-webkit-scrollbar-track, .swiper-wrapper::-webkit-scrollbar-thumb {
   width: 0;
   height: 0;
 }
@@ -66,12 +67,12 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  box-sizing: content-box;
   overflow: hidden;
   overflow-x: scroll;
   gap: 20px;
+  scrollbar-width: none;
 }
-.swiper-wrapper-mobile::-webkit-scrollbar {
+.swiper-wrapper-mobile::-webkit-scrollbar, .swiper-wrapper-mobile::-webkit-scrollbar-button, .swiper-wrapper-mobile::-webkit-scrollbar-track, .swiper-wrapper-mobile::-webkit-scrollbar-thumb {
   width: 0;
   height: 0;
 }
