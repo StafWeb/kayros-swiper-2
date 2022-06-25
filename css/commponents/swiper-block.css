@@ -36,7 +36,7 @@
 
 .swiper {
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -49,7 +49,6 @@
 
 .swiper-wrapper {
   display: flex;
-  gap: 60px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -65,8 +64,6 @@
 .swiper-slide {
   display: grid;
   grid-template-columns: 1fr;
-  width: 330px !important;
-  height: 542px !important;
   visibility: hidden;
   flex-shrink: 0;
   position: relative;
@@ -193,16 +190,33 @@
 }
 @media (max-width: 550px) {
   .swiper-block {
-    min-height: 100%;
+    max-height: 559px;
+  }
+  .swiper-block__container {
+    gap: 44px;
+    padding-left: 15px;
+    padding-top: 40px;
+  }
+  .swiper-block__title {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .swiper-block__descr {
+    text-align: center;
   }
 
+  .swiper {
+    width: 98%;
+  }
   .swiper-wrapper {
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
   }
-
   .swiper-slide {
     max-width: 200px;
     max-height: 332px;
+    margin: 0;
   }
   .swiper-slide img {
     width: 200px;

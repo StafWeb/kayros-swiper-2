@@ -27,7 +27,7 @@ const swiper = new Swiper('.swiper', {
   // parallax: true,
   // centeredSlides: true,
   slidesPerView: 3,
-  // spaceBetween: 60,
+  spaceBetween: 60,
   // centeredSlidesBounds:true,
   passiveListeners: true,
   mousewheel: {

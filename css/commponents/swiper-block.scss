@@ -36,7 +36,7 @@
 }
 .swiper {
   cursor: pointer;
-  width: 100%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -48,7 +48,7 @@
 }
 .swiper-wrapper {
   display: flex;
-  gap: 60px;
+  // gap: 60px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -63,8 +63,6 @@
 .swiper-slide {
   display: grid;
   grid-template-columns: 1fr;
-  width: 330px !important;
-  height: 542px !important;
   visibility: hidden;
   flex-shrink: 0;
   position: relative;
@@ -222,18 +220,18 @@
 // }
 // @media(max-width:)
 @media (max-width: 950px) {
-  .swiper-block__container{
+  .swiper-block__container {
     padding-left: 21px;
     padding-top: 80px;
   }
-  .swiper-wrapper{
+  .swiper-wrapper {
     gap: 20px;
   }
   .swiper-block__info {
     display: grid;
     justify-items: center;
   }
-  .swiper-block__descr{
+  .swiper-block__descr {
     width: 345px;
   }
   .swiper-slide:first-child {
@@ -241,22 +239,39 @@
   }
 }
 
-@media(max-width:550px){
-  .swiper-block{
-    min-height: 100%;
+@media (max-width: 550px) {
+  .swiper-block {
+    max-height: 559px;
+    &__container {
+      gap: 44px;
+      padding-left: 15px;
+      padding-top: 40px;
+
+    }
+    &__title{
+      font-size: 21px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &__descr{
+      text-align: center;
+    }
   }
-  .swiper-block__container{
-    // overflow: hidden;
+  .swiper{
+   width: 98%;
+  
+  &-wrapper {
+    overflow: hidden;
+    overflow-x: scroll;
   }
-  .swiper-wrapper{
-    overflow: scroll;
-  }
-  .swiper-slide{
+  &-slide {
     max-width: 200px;
     max-height: 332px;
-    img{
+    margin: 0;
+    img {
       width: 200px;
       height: 300px;
     }
   }
+}
 }
