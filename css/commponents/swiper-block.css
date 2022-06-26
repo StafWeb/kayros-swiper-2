@@ -81,6 +81,7 @@
   display: grid;
   grid-template-columns: 1fr;
   visibility: hidden;
+  max-height: 542px;
   flex-shrink: 0;
   position: relative;
   margin: auto 0;
@@ -247,5 +248,8 @@
   .swiper-slide img {
     width: 200px;
     height: 300px;
+  }
+  .swiper-slide__info-wrapper {
+    max-height: 332px;
   }
 }

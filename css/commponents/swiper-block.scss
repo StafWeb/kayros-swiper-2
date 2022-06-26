@@ -88,6 +88,7 @@
   display: grid;
   grid-template-columns: 1fr;
   visibility: hidden;
+  max-height: 542px;
   flex-shrink: 0;
   position: relative;
   margin: auto 0;
@@ -288,7 +289,6 @@
   }
   .swiper {
     width: 98%;
-
     &-wrapper {
       display: none;
       &-mobile {
@@ -302,6 +302,9 @@
       img {
         width: 200px;
         height: 300px;
+      }
+      &__info-wrapper{
+        max-height: 332px;
       }
     }
   }

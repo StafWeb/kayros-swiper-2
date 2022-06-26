@@ -10,18 +10,13 @@
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 27px;
-  line-height: 140%;
   letter-spacing: 0.05em;
   color: #333333;
-}
-.info p:first-child {
-  padding-right: 90px;
 }
 .info__link {
   font-family: "Open Sans", serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 160%;
   color: #b0976e;
 }
 .info__end {
@@ -32,4 +27,20 @@
   font-size: 16px;
   color: #333333;
   opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .info__container {
+    max-width: 1024px;
+    padding: 115px 40px;
+    gap: 40px;
+  }
+}
+@media (max-width: 870px) {
+  .info__container {
+    max-width: 768px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 70px 20px;
+  }
 }
