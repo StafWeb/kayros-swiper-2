@@ -104,9 +104,7 @@
   &:nth-child(3) {
     animation-delay: 2.6s;
   }
-  &:nth-child(4) {
-    animation-delay: 2.9s;
-  }
+
   &__info {
     &-wrapper {
       width: 100%;
@@ -141,19 +139,6 @@
     img {
       width: 100%;
       height: 495px;
-    }
-  }
-  &__pagination {
-    position: relative;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(176, 151, 110, 0.3);
-    .swiper-pagination-progressbar {
-      height: 100%;
-      background-color: rgba(176, 151, 110, 0.3);
-      .swiper-pagination-progressbar-fill {
-        background: rgba(176, 151, 110, 0.7);
-      }
     }
   }
 }
@@ -264,8 +249,19 @@
   .swiper-block__descr {
     width: 345px;
   }
-  .swiper-slide:first-child {
-    display: none;
+  .swiper-slide {
+    &:first-child {
+      display: none;
+    }
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 2.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 2.6s;
+    }
   }
 }
 
@@ -303,7 +299,7 @@
         width: 200px;
         height: 300px;
       }
-      &__info-wrapper{
+      &__info-wrapper {
         max-height: 332px;
       }
     }
