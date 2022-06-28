@@ -2,16 +2,8 @@ let options = {
   threshold: [0]
 };
 let observer = new IntersectionObserver(onEntry, options);
-// let images = document.querySelectorAll('[data-img]');
-// let blockInfo = document.querySelector('.swiper-block__info');
-let swiperDescr = document.querySelectorAll('.swiper-slide')
-// observer.observe(blockInfo);
-// for (let img of images) {
-//   observer.observe(img);
-// };
-for (let des of swiperDescr) {
-  observer.observe(des);
-};
+let swiperDescr = document.querySelectorAll('.swiper-slide');
+
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -19,6 +11,15 @@ function onEntry(entry) {
     }
   });
 };
+for (let des of swiperDescr) {
+  observer.observe(des);
+};
+
+
+
+
+
+
 
 const swiper = new Swiper('.swiper', {
   direction: "horizontal",

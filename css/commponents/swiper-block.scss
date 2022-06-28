@@ -305,3 +305,17 @@
     }
   }
 }
+
+@media(max-width: 450px){
+  .swiper-slide {
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 2.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0s;
+    }
+  }
+}

@@ -248,3 +248,17 @@
     max-height: 332px;
   }
 }
+@media (max-width: 450px) {
+  .swiper-slide:nth-child(2) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .swiper-slide:nth-child(3) {
+    -webkit-animation-delay: 2.3s;
+            animation-delay: 2.3s;
+  }
+  .swiper-slide:nth-child(4) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+}
