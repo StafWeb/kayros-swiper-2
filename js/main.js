@@ -1,18 +1,32 @@
 let options = {
-  threshold: [0]
+  threshold: [0.5]
 };
 let observer = new IntersectionObserver(onEntry, options);
 let swiperDescr = document.querySelectorAll('.swiper-slide');
-
+for (let des of swiperDescr) {
+  observer.observe(des);
+};
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('slideinup');
+      console.log(change.target);
     }
   });
 };
-for (let des of swiperDescr) {
-  observer.observe(des);
+
+let observerTwo = new IntersectionObserver(info, options);
+let titles = document.querySelectorAll('[data-info]');
+for (let tit of titles) {
+  observerTwo.observe(tit);
+};
+function info(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('fadeindown');
+      // console.log(change.target);
+    } 
+  });
 };
 
 
@@ -23,12 +37,12 @@ for (let des of swiperDescr) {
 
 const swiper = new Swiper('.swiper', {
   direction: "horizontal",
-  speed: 1500,
+  speed: 1600,
   slidesPerGroup: 2,
   // parallax: true,
   // centeredSlides: true,
   slidesPerView: 3,
-  spaceBetween: 30,
+  // spaceBetween: 30,
   // centeredSlidesBounds:true,
   passiveListeners: true,
   mousewheel: {

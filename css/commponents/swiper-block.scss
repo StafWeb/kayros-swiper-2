@@ -1,11 +1,12 @@
 .swiper-block {
   min-height: 100vh;
+  max-height: 100vh;
 
   &__container {
     display: grid;
     padding: 0px;
-    padding-left: 40px;
     max-width: 1440px;
+    max-height: 100vh;
   }
   &__info {
     display: none;
@@ -36,22 +37,23 @@
 }
 .swiper {
   cursor: pointer;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 90px;
   position: relative;
   overflow: hidden;
   list-style: none;
   padding: 0;
   z-index: 1;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 .swiper-wrapper {
   display: flex;
   // gap: 60px;
   position: relative;
   width: 100%;
-  height: 100%;
+  max-height: 100vh;
   z-index: 1;
   transition-property: transform;
   box-sizing: content-box;
@@ -85,10 +87,11 @@
   }
 }
 .swiper-slide {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   visibility: hidden;
-  max-height: 542px;
+  // max-height: 542px;
+  max-height: 100vh;
   flex-shrink: 0;
   position: relative;
   margin: auto 0;
@@ -108,7 +111,7 @@
   &__info {
     &-wrapper {
       width: 100%;
-      height: 542px;
+      height: 100%;
       display: flex;
       flex-direction: column;
     }
@@ -124,7 +127,6 @@
     margin-bottom: 74px;
   }
   &__descr {
-    width: 200px;
     font-weight: 400;
     font-size: 14px;
     line-height: 160%;
@@ -134,11 +136,10 @@
   }
 
   &__img {
-    // width: 330px;
-    // max-height: 495px;
+    height: 95%;
     img {
       width: 100%;
-      height: 495px;
+      height: 100%;
     }
   }
 }
@@ -235,11 +236,9 @@
   .swiper-block__container {
     max-width: 768px;
     max-height: 100%;
-    padding-left: 21px;
     padding-top: 80px;
   }
   .swiper {
-    width: 98%;
     min-height: 100%;
   }
   .swiper-block__info {
@@ -271,7 +270,6 @@
     max-height: 600px;
     &__container {
       gap: 44px;
-      padding-left: 15px;
       padding-top: 40px;
     }
     &__title {
@@ -284,7 +282,6 @@
     }
   }
   .swiper {
-    width: 98%;
     &-wrapper {
       display: none;
       &-mobile {
@@ -306,7 +303,7 @@
   }
 }
 
-@media(max-width: 450px){
+@media (max-width: 450px) {
   .swiper-slide {
     &:nth-child(2) {
       animation-delay: 2s;
