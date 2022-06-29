@@ -205,8 +205,10 @@
     max-height: 600px;
   }
   .swiper-block__container {
-    gap: 44px;
     padding-top: 40px;
+  }
+  .swiper-block__info {
+    max-height: 142px;
   }
   .swiper-block__title {
     font-size: 21px;

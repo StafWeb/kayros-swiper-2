@@ -268,8 +268,11 @@
     min-height: 559px;
     max-height: 600px;
     &__container {
-      gap: 44px;
+      // gap: 44px;
       padding-top: 40px;
+    }
+    &__info{
+      max-height: 142px;
     }
     &__title {
       font-size: 21px;
